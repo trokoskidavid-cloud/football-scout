@@ -1,0 +1,18 @@
+# Render.com blueprint (production). Database: MongoDB Atlas (set MONGODB_ATLAS_URI in the dashboard).
+services:
+  - type: web
+    name: footballscout
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_ATLAS_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: APP_URL
+        value: https://footballscout.onrender.com
+      - key: SEED_ON_START
+        value: "true"

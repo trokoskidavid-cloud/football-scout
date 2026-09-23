@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Листа на играчи · FootballScout</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg navbar-dark fs-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-binoculars-fill"></i> FootballScout</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Почетна</a></li>
+<li class="nav-item"><a class="nav-link active" href="players.html">Играчи</a></li>
+<li class="nav-item"><a class="nav-link" href="reports.html">Извештаи</a></li>
+<li class="nav-item"><a class="nav-link" href="clubs.html">Клубови</a></li>
+<li class="nav-item"><a class="nav-link" href="matches.html">Натпревари</a></li>
+<li class="nav-item"><a class="nav-link" href="search.html">Пребарување</a></li>
+<li class="nav-item"><a class="nav-link" href="external.html">TheSportsDB</a></li>
+<li class="nav-item"><a class="nav-link" href="dashboard.html">Статистика</a></li></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="history.html"><i class="bi bi-clock-history"></i> Историја</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html"><i class="bi bi-person-circle"></i> troko.scout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="container py-4 flex-grow-1">
+
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+  <h1 class="h3 mb-0">Играчи <span class="text-muted fs-6">(6 од 128)</span></h1>
+  <div><a href="external.html" class="btn btn-outline-primary"><i class="bi bi-cloud-download"></i> Увези од TheSportsDB</a>
+       <a href="player-add.html" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Нов играч</a></div>
+</div>
+<div class="row g-2 mb-3">
+  <div class="col-md-4"><input class="form-control" placeholder="Филтрирај по име..."></div>
+  <div class="col-6 col-md-3"><select class="form-select"><option>Сите позиции</option><option>GK</option><option>CB</option><option>CM</option><option>ST</option></select></div>
+  <div class="col-6 col-md-3"><select class="form-select"><option>Сите статуси</option><option>Се следи</option><option>Во потесен избор</option><option>Препорачан</option></select></div>
+  <div class="col-md-2"><select class="form-select"><option>Подреди: оценка</option><option>Подреди: возраст</option></select></div>
+</div>
+<div class="table-responsive"><table class="table table-hover align-middle bg-white">
+<thead class="table-light"><tr><th>Играч</th><th>Поз.</th><th>Клуб</th><th>Нац.</th><th>Год.</th><th>Вредност</th><th>Просек</th><th>Статус</th><th></th></tr></thead>
+<tbody><tr>
+  <td><img src="https://placehold.co/40x40?text=M" class="rounded-circle me-2" alt=""><a href="player-details.html">Marko Petrovski</a></td>
+  <td><span class="badge text-bg-dark">ST</span></td><td>Вардар</td><td>MKD</td><td>19</td><td>€450K</td>
+  <td><span class="badge rating-badge bg-success">8.1</span></td>
+  <td><span class="badge text-bg-success">Препорачан</span></td>
+  <td class="text-end"><a href="player-edit.html" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></a>
+      <a href="player-delete.html" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a></td></tr>
+<tr>
+  <td><img src="https://placehold.co/40x40?text=L" class="rounded-circle me-2" alt=""><a href="player-details.html">Luka Stojanov</a></td>
+  <td><span class="badge text-bg-dark">CAM</span></td><td>Вардар</td><td>MKD</td><td>21</td><td>€600K</td>
+  <td><span class="badge rating-badge bg-success">7.6</span></td>
+  <td><span class="badge text-bg-primary">Во потесен избор</span></td>
+  <td class="text-end"><a href="player-edit.html" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></a>
+      <a href="player-delete.html" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a></td></tr>
+<tr>
+  <td><img src="https://placehold.co/40x40?text=B" class="rounded-circle me-2" alt=""><a href="player-details.html">Bojan Hristov</a></td>
+  <td><span class="badge text-bg-dark">CB</span></td><td>Струга</td><td>MKD</td><td>22</td><td>€350K</td>
+  <td><span class="badge rating-badge bg-warning">7.2</span></td>
+  <td><span class="badge text-bg-warning">Се следи</span></td>
+  <td class="text-end"><a href="player-edit.html" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></a>
+      <a href="player-delete.html" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a></td></tr>
+<tr>
+  <td><img src="https://placehold.co/40x40?text=N" class="rounded-circle me-2" alt=""><a href="player-details.html">Nikola Ilievski</a></td>
+  <td><span class="badge text-bg-dark">GK</span></td><td>Работнички</td><td>MKD</td><td>20</td><td>€200K</td>
+  <td><span class="badge rating-badge bg-warning">6.9</span></td>
+  <td><span class="badge text-bg-warning">Се следи</span></td>
+  <td class="text-end"><a href="player-edit.html" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></a>
+      <a href="player-delete.html" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a></td></tr>
+<tr>
+  <td><img src="https://placehold.co/40x40?text=D" class="rounded-circle me-2" alt=""><a href="player-details.html">David Kostov</a></td>
+  <td><span class="badge text-bg-dark">LW</span></td><td>Академија Пандев</td><td>MKD</td><td>18</td><td>€300K</td>
+  <td><span class="badge rating-badge bg-success">7.9</span></td>
+  <td><span class="badge text-bg-primary">Во потесен избор</span></td>
+  <td class="text-end"><a href="player-edit.html" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></a>
+      <a href="player-delete.html" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a></td></tr>
+<tr>
+  <td><img src="https://placehold.co/40x40?text=G" class="rounded-circle me-2" alt=""><a href="player-details.html">Goran Spasovski</a></td>
+  <td><span class="badge text-bg-dark">CM</span></td><td>Струга</td><td>MKD</td><td>23</td><td>€250K</td>
+  <td><span class="badge rating-badge bg-danger">5.8</span></td>
+  <td><span class="badge text-bg-danger">Одбиен</span></td>
+  <td class="text-end"><a href="player-edit.html" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></a>
+      <a href="player-delete.html" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a></td></tr></tbody></table></div>
+<nav><ul class="pagination justify-content-center"><li class="page-item disabled"><a class="page-link">«</a></li><li class="page-item active"><a class="page-link">1</a></li><li class="page-item"><a class="page-link">2</a></li><li class="page-item"><a class="page-link">3</a></li><li class="page-item"><a class="page-link">»</a></li></ul></nav>
+
+<section class="card mt-5 border-info mockup-desc">
+  <div class="card-header bg-info-subtle"><i class="bi bi-info-circle"></i> Опис на маската: <strong>Листа на играчи</strong> <span class="badge text-bg-secondary ms-2">Поглед: Скаут (регистриран корисник)</span></div>
+  <div class="card-body"><ul class="mb-0"><li>Printout на листа на елементи (играчи) со основни податоци, просечна оценка од извештаите и статус на следење.</li>
+<li>Филтрирање по име, позиција и статус и подредување; страничење (pagination).</li>
+<li>Гостинот ја гледа листата без копчињата за уредување/бришење; скаутот може да додава и уредува; само администраторот брише.</li>
+<li>Копче за увоз на играч од надворешниот извор (TheSportsDB).</li></ul></div>
+</section>
+</main>
+<footer class="fs-footer py-3 mt-auto">
+  <div class="container d-flex flex-wrap justify-content-between small">
+    <span>&copy; 2026 FootballScout · Веб програмирање</span>
+    <span>Податоци за играчи: TheSportsDB API</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Статистика и графикони · FootballScout</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg navbar-dark fs-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-binoculars-fill"></i> FootballScout</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Почетна</a></li>
+<li class="nav-item"><a class="nav-link" href="players.html">Играчи</a></li>
+<li class="nav-item"><a class="nav-link" href="reports.html">Извештаи</a></li>
+<li class="nav-item"><a class="nav-link" href="clubs.html">Клубови</a></li>
+<li class="nav-item"><a class="nav-link" href="matches.html">Натпревари</a></li>
+<li class="nav-item"><a class="nav-link" href="search.html">Пребарување</a></li>
+<li class="nav-item"><a class="nav-link" href="external.html">TheSportsDB</a></li>
+<li class="nav-item"><a class="nav-link active" href="dashboard.html">Статистика</a></li></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="history.html"><i class="bi bi-clock-history"></i> Историја</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html"><i class="bi bi-person-circle"></i> troko.scout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="container py-4 flex-grow-1">
+
+<h1 class="h3 mb-3"><i class="bi bi-bar-chart"></i> Статистика</h1>
+<div class="row g-3">
+  <div class="col-lg-6"><div class="card"><div class="card-header">Извештаи по препорака</div><div class="card-body"><img src="https://placehold.co/520x280?text=Doughnut:+Потпиши+/+Следи+/+Одбиј" class="img-fluid" alt=""></div></div></div>
+  <div class="col-lg-6"><div class="card"><div class="card-header">Топ 10 стрелци</div><div class="card-body"><img src="https://placehold.co/520x280?text=Bar+chart:+голови+по+играч" class="img-fluid" alt=""></div></div></div>
+  <div class="col-lg-6"><div class="card"><div class="card-header">Просечна оценка по позиција</div><div class="card-body"><img src="https://placehold.co/520x280?text=Bar+chart:+позиција+vs+оценка" class="img-fluid" alt=""></div></div></div>
+  <div class="col-lg-6"><div class="card"><div class="card-header">Најактивни скаути</div><div class="card-body"><img src="https://placehold.co/520x280?text=Horizontal+bar:+извештаи+по+скаут" class="img-fluid" alt=""></div></div></div>
+</div>
+
+<section class="card mt-5 border-info mockup-desc">
+  <div class="card-header bg-info-subtle"><i class="bi bi-info-circle"></i> Опис на маската: <strong>Статистика и графикони</strong> <span class="badge text-bg-secondary ms-2">Поглед: Гостин / сите</span></div>
+  <div class="card-body"><ul class="mb-0"><li>Дополнително презентирање на податоци со графикони (Chart.js): распределба на препораки, топ стрелци, просечна оценка по позиција, најактивни скаути.</li>
+<li>Податоците се добиваат од агрегациски REST API крајни точки.</li></ul></div>
+</section>
+</main>
+<footer class="fs-footer py-3 mt-auto">
+  <div class="container d-flex flex-wrap justify-content-between small">
+    <span>&copy; 2026 FootballScout · Веб програмирање</span>
+    <span>Податоци за играчи: TheSportsDB API</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

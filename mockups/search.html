@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Напредно пребарување · FootballScout</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg navbar-dark fs-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-binoculars-fill"></i> FootballScout</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Почетна</a></li>
+<li class="nav-item"><a class="nav-link" href="players.html">Играчи</a></li>
+<li class="nav-item"><a class="nav-link" href="reports.html">Извештаи</a></li>
+<li class="nav-item"><a class="nav-link" href="clubs.html">Клубови</a></li>
+<li class="nav-item"><a class="nav-link" href="matches.html">Натпревари</a></li>
+<li class="nav-item"><a class="nav-link active" href="search.html">Пребарување</a></li>
+<li class="nav-item"><a class="nav-link" href="external.html">TheSportsDB</a></li>
+<li class="nav-item"><a class="nav-link" href="dashboard.html">Статистика</a></li></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="history.html"><i class="bi bi-clock-history"></i> Историја</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html"><i class="bi bi-person-circle"></i> troko.scout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="container py-4 flex-grow-1">
+
+<h1 class="h3 mb-3"><i class="bi bi-search"></i> Пребарување</h1>
+<div class="card mb-3"><div class="card-body">
+<form class="row g-3">
+  <div class="col-md-6"><label class="form-label">Клучен збор</label><input class="form-control" value="ko" placeholder="Име, презиме, клуб..."></div>
+  <div class="col-md-3"><label class="form-label">Позиција</label><select class="form-select" multiple size="3"><option selected>LW</option><option selected>ST</option><option>CAM</option></select></div>
+  <div class="col-md-3"><label class="form-label">Националност</label><select class="form-select"><option>Сите</option><option selected>MKD</option></select></div>
+  <div class="col-md-4"><label class="form-label">Возраст: 16 – 21</label><input type="range" class="form-range" min="15" max="40" value="21"></div>
+  <div class="col-md-4"><label class="form-label">Мин. просечна оценка: 7.0</label><input type="range" class="form-range" min="1" max="10" step="0.5" value="7"></div>
+  <div class="col-md-4"><label class="form-label">Макс. вредност (€)</label><input type="number" class="form-control" value="500000"></div>
+  <div class="col-12"><button type="button" class="btn btn-primary"><i class="bi bi-search"></i> Пребарај</button> <button type="reset" class="btn btn-link">Исчисти</button></div>
+</form></div></div>
+<p class="text-muted">Пронајдени <strong>2</strong> играчи</p>
+<div class="row g-3">
+  <div class="col-md-6"><div class="card player-card"><div class="card-body d-flex gap-3 align-items-center">
+    <img src="https://placehold.co/64x64?text=DK" class="rounded" alt=""><div class="flex-grow-1"><a href="player-details.html" class="fw-bold">David Kostov</a><br><small>LW · Академија Пандев · 18 год. · €300K</small></div><span class="badge bg-success fs-6">7.9</span></div></div></div>
+  <div class="col-md-6"><div class="card player-card"><div class="card-body d-flex gap-3 align-items-center">
+    <img src="https://placehold.co/64x64?text=MP" class="rounded" alt=""><div class="flex-grow-1"><a href="player-details.html" class="fw-bold">Marko Petrovski</a><br><small>ST · Вардар · 19 год. · €450K</small></div><span class="badge bg-success fs-6">8.1</span></div></div></div>
+</div>
+
+<section class="card mt-5 border-info mockup-desc">
+  <div class="card-header bg-info-subtle"><i class="bi bi-info-circle"></i> Опис на маската: <strong>Напредно пребарување</strong> <span class="badge text-bg-secondary ms-2">Поглед: Гостин / сите</span></div>
+  <div class="card-body"><ul class="mb-0"><li>Напредно пребарување на играчи според повеќе критериуми (клучен збор, позиции, националност, возраст, минимална оценка, вредност).</li>
+<li>Резултатите се прикажуваат како картички (повторно искористена компонента PlayerCard).</li>
+<li>Параметрите на пребарувањето се дел од URL-то, па навигацијата напред/назад во прелистувачот ги зачувува.</li></ul></div>
+</section>
+</main>
+<footer class="fs-footer py-3 mt-auto">
+  <div class="container d-flex flex-wrap justify-content-between small">
+    <span>&copy; 2026 FootballScout · Веб програмирање</span>
+    <span>Податоци за играчи: TheSportsDB API</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

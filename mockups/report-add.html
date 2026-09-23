@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Нов scouting извештај · FootballScout</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg navbar-dark fs-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-binoculars-fill"></i> FootballScout</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Почетна</a></li>
+<li class="nav-item"><a class="nav-link" href="players.html">Играчи</a></li>
+<li class="nav-item"><a class="nav-link" href="reports.html">Извештаи</a></li>
+<li class="nav-item"><a class="nav-link" href="clubs.html">Клубови</a></li>
+<li class="nav-item"><a class="nav-link" href="matches.html">Натпревари</a></li>
+<li class="nav-item"><a class="nav-link" href="search.html">Пребарување</a></li>
+<li class="nav-item"><a class="nav-link" href="external.html">TheSportsDB</a></li>
+<li class="nav-item"><a class="nav-link" href="dashboard.html">Статистика</a></li></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="history.html"><i class="bi bi-clock-history"></i> Историја</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html"><i class="bi bi-person-circle"></i> troko.scout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="container py-4 flex-grow-1">
+
+<h1 class="h3 mb-3"><i class="bi bi-clipboard-plus"></i> Нов scouting извештај</h1>
+<div class="card shadow-sm"><div class="card-body"><form class="row g-3">
+  <div class="col-md-6"><label class="form-label">Играч *</label><select class="form-select"><option>Marko Petrovski</option></select></div>
+  <div class="col-md-6"><label class="form-label">Натпревар (опц.)</label><select class="form-select"><option>20.09.2026 Вардар 2:1 Работнички</option></select></div>
+  <div class="col-12"><h6 class="mt-2">Оценки (1–10)</h6></div>
+  <div class="col-md-4"><label class="form-label">Техника: 8</label><input type="range" class="form-range" min="1" max="10" value="8"></div>
+  <div class="col-md-4"><label class="form-label">Физичка подготовка: 7</label><input type="range" class="form-range" min="1" max="10" value="7"></div>
+  <div class="col-md-4"><label class="form-label">Тактика: 8</label><input type="range" class="form-range" min="1" max="10" value="8"></div>
+  <div class="col-md-6"><label class="form-label">Ментална сила: 9</label><input type="range" class="form-range" min="1" max="10" value="9"></div>
+  <div class="col-md-6"><label class="form-label">Потенцијал: 9</label><input type="range" class="form-range" min="1" max="10" value="9"></div>
+  <div class="col-md-6"><label class="form-label">Силни страни</label><textarea class="form-control" rows="2">Завршница, движење без топка</textarea></div>
+  <div class="col-md-6"><label class="form-label">Слаби страни</label><textarea class="form-control" rows="2">Игра со лева нога</textarea></div>
+  <div class="col-12"><label class="form-label">Резиме *</label><textarea class="form-control" rows="3">Одличен настап, постигна гол и асистенција.</textarea></div>
+  <div class="col-md-6"><label class="form-label">Препорака *</label><div>
+     <input type="radio" class="btn-check" name="r" id="r1" checked><label class="btn btn-outline-success" for="r1">Потпиши</label>
+     <input type="radio" class="btn-check" name="r" id="r2"><label class="btn btn-outline-warning" for="r2">Следи</label>
+     <input type="radio" class="btn-check" name="r" id="r3"><label class="btn btn-outline-danger" for="r3">Одбиј</label></div></div>
+  <div class="col-12"><button type="button" class="btn btn-primary">Зачувај извештај</button></div>
+</form></div></div>
+
+<section class="card mt-5 border-info mockup-desc">
+  <div class="card-header bg-info-subtle"><i class="bi bi-info-circle"></i> Опис на маската: <strong>Нов scouting извештај</strong> <span class="badge text-bg-secondary ms-2">Поглед: Скаут (регистриран корисник)</span></div>
+  <div class="card-body"><ul class="mb-0"><li>Додавање зависен елемент – scouting извештај за избран играч (и опционално натпревар).</li>
+<li>Оценките се внесуваат со лизгачи (напредна HTML компонента range) во опсег 1–10.</li>
+<li>Препораката се бира од затворен сет вредности (Потпиши/Следи/Одбиј).</li>
+<li>Просечната оценка се пресметува автоматски.</li></ul></div>
+</section>
+</main>
+<footer class="fs-footer py-3 mt-auto">
+  <div class="container d-flex flex-wrap justify-content-between small">
+    <span>&copy; 2026 FootballScout · Веб програмирање</span>
+    <span>Податоци за играчи: TheSportsDB API</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
