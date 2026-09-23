@@ -18,7 +18,8 @@ export const POSITIONS = ['GK', 'CB', 'LB', 'RB', 'CDM', 'CM', 'CAM', 'LW', 'RW'
 export const FEET = ['left', 'right', 'both'];
 export const PLAYER_STATUSES = ['monitoring', 'shortlisted', 'recommended', 'rejected'];
 export const RECOMMENDATIONS = ['sign', 'monitor', 'reject'];
-export const COUNTRIES = ['North Macedonia', 'Albania', 'Serbia', 'Kosovo', 'Bulgaria', 'Greece', 'Croatia', 'Slovenia', 'Montenegro', 'Bosnia and Herzegovina', 'Turkey', 'Other'];
+export const COUNTRIES = ['North Macedonia', 'Albania', 'Serbia', 'Kosovo', 'Bulgaria', 'Greece', 'Croatia', 'Slovenia', 'Montenegro', 'Bosnia and Herzegovina', 'Turkey',
+  'Spain', 'England', 'France', 'Germany', 'Italy', 'Portugal', 'Netherlands', 'Belgium', 'Brazil', 'Argentina', 'Uruguay', 'Other'];
 
 /** Rule helpers – each returns an error message or null */
 export const required = (msg = 'Задолжително поле') => (v) => (v === undefined || v === null || String(v).trim() === '' ? msg : null);

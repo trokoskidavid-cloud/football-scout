@@ -32,7 +32,7 @@ export function HistoryPage() {
         </select>
         <select className="form-select w-auto" value={query.entityType || ''} onChange={(e) => update('entityType', e.target.value)} aria-label="Тип">
           <option value="">Сите типови</option>
-          {['Player', 'Report', 'Comment', 'Club', 'Match', 'User'].map((t) => <option key={t}>{t}</option>)}
+          {[['Player', 'Играч'], ['Report', 'Извештај'], ['Comment', 'Коментар'], ['Club', 'Клуб'], ['Match', 'Натпревар'], ['User', 'Корисник']].map(([v, l]) => <option key={v} value={v}>{l}</option>)}
         </select>
         {isAdmin && (
           <select className="form-select w-auto" value={query.user || ''} onChange={(e) => update('user', e.target.value)} aria-label="Корисник">

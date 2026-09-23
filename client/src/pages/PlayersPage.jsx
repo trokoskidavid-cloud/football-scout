@@ -28,7 +28,7 @@ export default function PlayersPage() {
 
   return (
     <>
-      <PageHeader title="Играчи" icon="bi-people" subtitle={data ? `${data.total} играчи во базата` : ' '}>
+      <PageHeader title="Играчи" icon="bi-people" subtitle={data ? (['q', 'position', 'status'].some((k) => query[k]) ? `Пронајдени ${data.total} играчи` : `${data.total} играчи во базата`) : ' '}>
         {isLoggedIn && (
           <>
             <Link to="/external" className="btn btn-outline-primary"><i className="bi bi-cloud-download me-1" />Увези од TheSportsDB</Link>
@@ -39,7 +39,7 @@ export default function PlayersPage() {
 
       <div className="row g-2 mb-3">
         <div className="col-md-4">
-          <input key={query.q || ''} className="form-control" placeholder="Филтрирај по име или националност..." defaultValue={query.q || ''}
+          <input key={query.q || ''} className="form-control" placeholder="Филтрирај по име, клуб или националност..." defaultValue={query.q || ''}
             onKeyDown={(e) => e.key === 'Enter' && update('q', e.target.value.trim())}
             onBlur={(e) => e.target.value.trim() !== (query.q || '') && update('q', e.target.value.trim())} aria-label="Филтер" />
         </div>

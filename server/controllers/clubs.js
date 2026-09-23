@@ -17,7 +17,13 @@ const list = asyncHandler(async (req, res) => {
 const getOne = asyncHandler(async (req, res) => {
   const club = await Club.findById(req.params.id).populate('playerCount');
   if (!club) throw new HttpError(404, 'Клубот не постои');
-  const players = await Player.find({ club: club._id }).sort({ lastName: 1 });
+  const players = await Player.aggregate([
+    { $match: { club: club._id } },
+    { $lookup: { from: 'reports', localField: '_id', foreignField: 'player', as: 'reports' } },
+    { $addFields: { avgRating: { $round: [{ $avg: '$reports.overall' }, 1] }, reportCount: { $size: '$reports' } } },
+    { $project: { reports: 0 } },
+    { $sort: { lastName: 1 } },
+  ]);
   res.json({ ...club.toJSON(), players });
 });
 

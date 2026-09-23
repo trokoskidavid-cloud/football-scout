@@ -1,4 +1,5 @@
-import { NavLink, Link, Outlet, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { NavLink, Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { useAuth } from '../context/AuthContext';
 import { initials } from '../pipes';
@@ -7,6 +8,10 @@ import { initials } from '../pipes';
 export function AppNavbar() {
   const { user, isLoggedIn, isAdmin, logout } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const [expanded, setExpanded] = useState(false);
+  // close the mobile menu whenever the page changes (also for links outside the navbar)
+  useEffect(() => setExpanded(false), [location.pathname, location.search]);
   const links = [
     ['/players', 'Играчи', 'bi-people'],
     ['/reports', 'Извештаи', 'bi-clipboard-data'],
@@ -16,7 +21,7 @@ export function AppNavbar() {
     ['/dashboard', 'Статистика', 'bi-bar-chart'],
   ];
   return (
-    <Navbar expand="lg" variant="dark" className="fs-navbar" collapseOnSelect>
+    <Navbar expand="lg" variant="dark" className="fs-navbar" collapseOnSelect expanded={expanded} onToggle={setExpanded}>
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold">
           <i className="bi bi-binoculars-fill me-1" /> FootballScout
@@ -59,7 +64,7 @@ export function AppNavbar() {
             ) : (
               <>
                 <Nav.Link as={NavLink} to="/login"><i className="bi bi-box-arrow-in-right me-1" />Најава</Nav.Link>
-                <Nav.Link as={NavLink} to="/register" className="btn btn-warning btn-sm text-dark ms-lg-2 px-3">Регистрација</Nav.Link>
+                <Link to="/register" className="btn btn-warning btn-sm text-dark fw-semibold ms-lg-2 px-3 align-self-lg-center align-self-start my-1">Регистрација</Link>
               </>
             )}
           </Nav>

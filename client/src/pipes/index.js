@@ -13,13 +13,17 @@ export function age(dateOfBirth) {
   return Math.floor((Date.now() - new Date(dateOfBirth).getTime()) / YEAR_MS);
 }
 
+const MONTHS_MK = ['јануари', 'февруари', 'март', 'април', 'мај', 'јуни', 'јули', 'август', 'септември', 'октомври', 'ноември', 'декември'];
+
 /** 2) Date -> "20.09.2026" (short) or "20 септември 2026, 14:32" (long) */
 export function formatDate(date, format = 'short') {
   if (!date) return '–';
   const d = new Date(date);
   if (Number.isNaN(d.getTime())) return '–';
   if (format === 'long') {
-    return d.toLocaleString('mk-MK', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    const hh = String(d.getHours()).padStart(2, '0');
+    const mm = String(d.getMinutes()).padStart(2, '0');
+    return `${d.getDate()} ${MONTHS_MK[d.getMonth()]} ${d.getFullYear()}, ${hh}:${mm}`;
   }
   if (format === 'iso') return d.toISOString().slice(0, 10);
   return `${String(d.getDate()).padStart(2, '0')}.${String(d.getMonth() + 1).padStart(2, '0')}.${d.getFullYear()}`;

@@ -68,7 +68,7 @@ export class Player {
   }
   get fullName() { return `${this.firstName} ${this.lastName}`.trim(); }
   get age() { return age(this.dateOfBirth); }
-  get photo() { return this.photoUrl || `https://ui-avatars.com/api/?background=146c43&color=fff&name=${encodeURIComponent(this.fullName)}`; }
+  get photo() { return this.photoUrl || `https://ui-avatars.com/api/?size=512&background=146c43&color=fff&name=${encodeURIComponent(this.fullName)}`; }
   toPayload() {
     const num = (v) => (v === '' || v == null ? undefined : Number(v));
     return {

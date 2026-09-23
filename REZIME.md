@@ -2,6 +2,7 @@
 
 **Предмет:** Веб програмирање 2026 · **Проект:** Динамичка веб-апликација од серверска и клиентска страна
 **Изработил:** David Trokoski
+**Професор:** Наташа Табаковска
 **Технологии:** MongoDB · Express · React · Node.js · Docker · MongoDB Atlas · Render · TheSportsDB API
 
 **Апликација:** https://footballscout.onrender.com
